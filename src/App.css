@@ -1,0 +1,173 @@
+/* styles.css (o cualquier otro nombre que le hayas dado al archivo CSS) */
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1dd9ed;
+  color: #10a873;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(215, 239, 244, 0.986);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  color:rgb(46, 199, 194)
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para los botones */
+button {
+  background-color: #46c8dc;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #007A8B;
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.login-form input {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-form button {
+  background-color: #008CBA;
+}
+
+.login-form button:hover {
+  background-color: #007A8B;
+}
+
+/* Estilos para los componentes BuyStock, SellStock y DepositFunds */
+.buy-stock,
+.sell-stock,
+.deposit-funds {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.buy-stock h2,
+.sell-stock h2,
+.deposit-funds h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.buy-stock select,
+.sell-stock select {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 14px;
+  margin: 5px;
+}
+
+.buy-stock input,
+.sell-stock input,
+.deposit-funds input {
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 14px;
+}
+
+.buy-stock button,
+.sell-stock button,
+.deposit-funds button {
+  background-color: #0f8a8c;
+  color: #fff;
+  padding: 10px;
+}
+
+.buy-stock button:hover,
+.sell-stock button:hover,
+.deposit-funds button:hover {
+  background-color: #454ca0;
+  border-radius: 14px;
+}
+
+/* Estilos para la lista de acciones y detalles de acciones */
+.stock-list,
+.stock-details {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.stock-list h2,
+.stock-details h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.stock-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stock-list li {
+  margin-bottom: 5px;
+}
+
+/* Estilos para el formulario de cambio de PIN */
+.change-pin {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.change-pin h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.change-pin input {
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 14px;
+}
+
+.change-pin button {
+  background-color: #0f8a8c;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.change-pin button:hover {
+  background-color: #1dd9ed;
+}
