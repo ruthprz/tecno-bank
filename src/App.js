@@ -18,7 +18,7 @@ const App = () => {
 
   const [user, setUser] = useState(null);
   const handleLogin = (username) => {
-    // Aquí podrías realizar acciones adicionales después del inicio de sesión, como cargar datos específicos del usuario, etc.
+
     setUser(userData);
     setLoggedIn(true);
     setPin(pin);
@@ -45,8 +45,7 @@ const App = () => {
   };
 
   const handleBuyStock = (stock, quantity) => {
-    // Aquí, deberías realizar la lógica para actualizar los datos del usuario
-    // y registrar la compra de acciones.
+
     const stockId = stock.id;
     const updatedStocks = user.stocks.map((item) =>
       item.stockId === stockId ? { ...item, quantity: item.quantity + quantity } : item
