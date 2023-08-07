@@ -1,4 +1,4 @@
-// BuyStock.js
+
 import React, { useState } from 'react';
 
 const BuyStock = ({ stocks, user, onBuyStock }) => {
@@ -6,9 +6,7 @@ const BuyStock = ({ stocks, user, onBuyStock }) => {
   const [quantity, setQuantity] = useState('');
 
   const handleBuyStock = () => {
-    // Aquí puedes implementar la lógica para comprar acciones.
-    // En este ejemplo, simplemente verificamos que los campos no estén vacíos
-    // y que la cantidad sea un número positivo.
+    
     if (selectedStock.trim() === '' || quantity.trim() === '') {
       alert('Por favor, selecciona una acción y escribe la cantidad.');
     } else {
@@ -20,8 +18,7 @@ const BuyStock = ({ stocks, user, onBuyStock }) => {
       } else if (user.balance < totalCost) {
         alert('Fondos insuficientes para comprar acciones.');
       } else {
-        // Aquí, deberías realizar la lógica para actualizar los datos del usuario
-        // y registrar la compra de acciones.
+       
         alert('Acciones compradas exitosamente.');
         onBuyStock(stock, parseInt(quantity));
         setSelectedStock('');

@@ -1,4 +1,4 @@
-// Login.js
+
 import React, { useState } from 'react';
 import ChangePin from './ChangePin';
 
@@ -10,8 +10,8 @@ const Login = ({ userData,onLogin }) => {
 
   const handleLogin = () => {
     console.log(userData.user);
-    // Aquí puedes realizar la lógica de autenticación.
-    // En este ejemplo, simplemente comprobamos si el nombre de usuario y el PIN coinciden con los valores "demo" y "1234", respectivamente.
+    
+  
     if (username === userData.user && pin === userData.pin) {
       onLogin(username, pin);
     } else {

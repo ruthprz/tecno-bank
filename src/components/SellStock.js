@@ -1,4 +1,4 @@
-// SellStock.js
+
 import React, { useState } from 'react';
 
 const SellStock = ({ stocks, user, onSellStock }) => {
@@ -6,9 +6,6 @@ const SellStock = ({ stocks, user, onSellStock }) => {
   const [quantity, setQuantity] = useState('');
 
   const handleSellStock = () => {
-    // Aquí puedes implementar la lógica para vender acciones.
-    // En este ejemplo, simplemente verificamos que los campos no estén vacíos
-    // y que la cantidad sea un número positivo.
     if (selectedStock.trim() === '' || quantity.trim() === '') {
       alert('Por favor, selecciona una acción y escribe la cantidad.');
     } else {
@@ -23,8 +20,7 @@ const SellStock = ({ stocks, user, onSellStock }) => {
         if (!userStock || userStock.quantity < parseInt(quantity)) {
           alert('No tienes suficientes acciones para vender.');
         } else {
-          // Aquí, deberías realizar la lógica para actualizar los datos del usuario
-          // y registrar la venta de acciones.
+          // registrar la venta de acciones.
           alert('Acciones vendidas exitosamente.');
           onSellStock(stock, parseInt(quantity));
           setSelectedStock('');

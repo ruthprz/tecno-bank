@@ -11,6 +11,7 @@ import SellStock from './components/SellStock';
 import BuyStock from './components/BuyStock';
 import JsPDF from 'jspdf';
 import './App.css';
+
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [selectedStock, setSelectedStock] = useState(null);
@@ -55,17 +56,24 @@ const App = () => {
   };
 
   const generatePDF = () => {
+    var date = { currentTime: new Date().toLocaleString() };
     let num = 180; 
     const report = new JsPDF('portrait','pt','a4');
+    report.text(200,60, `ESTADO DE CUENTA`);
     report.text(100,100, `Reporte Final de las transacciones realizadas`);
     report.text(100,120, `Usuario: ${user.user}`);
     report.text(100,140, `balance: ${user.balance}`);
+    console.log("date",date);
+    report.text(100,80, `Hora de Reporte: ${date.currentTime}`);
     report.text(100,160, `Total de Acciones:`);
+    
     for(var i=1; i < user.stocks.length;i++){
 
       report.text(100,num, `accion: ${user.stocks[i].symbol} : ${user.stocks[i].quantity}`);
       num = num +20;
     }
+
+    report.text(100,140, `balance: ${user.balance}`);
     report.save('report.pdf');
 
   };
