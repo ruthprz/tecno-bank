@@ -79,8 +79,7 @@ const App = () => {
   };
 
   const handleSellStock = (stock, quantity) => {
-    // Aquí, deberías realizar la lógica para actualizar los datos del usuario
-    // y registrar la venta de acciones.
+    
     const stockId = stock.id;
     const updatedStocks = user.stocks.map((item) =>
       item.stockId === stockId ? { ...item, quantity: item.quantity - quantity } : item
